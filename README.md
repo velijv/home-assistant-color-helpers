@@ -11,7 +11,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 ## RGB to HEX
 
 <details>
-  <summary> 👈 example input </summary>
+  <summary> 👈 example input — <b>returns <code>0000ff</code></b> </summary>
   
 ```jinja
 {%- set r = 0 -%}
@@ -25,12 +25,10 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 {{ '%02x%02x%02x' | format(r, g, b) }}
 ```
 
-#### returns `0000ff`
-
 ## HEX to RGB
 
 <details>
-  <summary> 👈 example input </summary>
+  <summary> 👈 example input — <b>returns <code>(0, 0, 255)</code></b> </summary>
   
 ```jinja
 {%- set rr = 'ff' -%}
@@ -44,7 +42,17 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 {{r | int(base=16), g | int(base=16), b | int(base=16)}}
 ```
 
-#### returns `(0, 0, 255)`
+### Get colors
+```jinja
+{{ states.light.reading.attributes.hs_color }}
+# returns `(28.391, 65.659)`
+```
+
+```jinja
+{{ states.light.reading.attributes.rgb_color }}
+# returns `(255, 166, 87)`
+```
+
 
 ## 🫵 Try them out in 
 
