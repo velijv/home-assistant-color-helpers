@@ -2,7 +2,6 @@
 
 Common **jinja** template **color helper** functions for [![Home Assistant](https://img.shields.io/badge/Home-Assistant-555?logo=HomeAssistant&logoColor=fff&labelColor=03a9f4&style=flat)](https://github.com/home-assistant)
 
-1. [extract colors](#extract-colors)
 2. convert [RGB to HEX](#rgb-to-hex)
 3. convert [HEX to RGB](#hex-to-rgb)
 5. convert [HS to RGB](#hs-to-rgb)
@@ -11,7 +10,8 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 ## Extract colors
 
-### 🖖  Hue and Saturation
+<details>
+  <summary> 🖖 Hue and Saturation <code>(state_attr('light.x','hs_color')</code> </summary>
 
 ```jinja
 {%- set h = (state_attr('light.desk','hs_color') | list )[0] -%}
@@ -20,7 +20,11 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
   # saturation: {{ s }}
 ```
 
-### 🖐 Red, Green and Blue 
+</details>
+
+
+<details>
+  <summary> 🖐 Red, Green and Blue <code>state_attr('light.x','rgb_color')</code> </summary>
 
 ```jinja
 {%- set r = (state_attr('light.desk','rgb_color') | list )[0] -%}
@@ -33,7 +37,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 </details>
 
-# Convert them in Jinja2
+### Convert colors in Jinja template
 
 ## RGB to HEX
 
@@ -48,9 +52,9 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 </details>
 
-```jinja
-hex: {{ '%02x%02x%02x' | format(r, g, b) }} - or - {{'%02x'%r+'%02x'%g+'%02x'%b}} 
-```
+> ```jinja
+> hex: {{ '%02x%02x%02x' | format(r, g, b) }} - or - {{'%02x'%r+'%02x'%g+'%02x'%b}} 
+> ```
 
 ## HEX to RGB
 
@@ -65,9 +69,9 @@ hex: {{ '%02x%02x%02x' | format(r, g, b) }} - or - {{'%02x'%r+'%02x'%g+'%02x'%b}
 
 </details>
 
-```jinja
-rgb: {{r | int(base=16), g | int(base=16), b | int(base=16)}}
-```
+> ```jinja
+> rgb: {{r | int(base=16), g | int(base=16), b | int(base=16)}}
+> ```
 
 ## HS to RGB [![](https://img.shields.io/badge/🔥-🔫%20😡-B41717.svg?logo=jinja&logoColor=fff&labelColor=B41717&style=flat&color=rgba(180,23,23,0.3) "das f*kged up")](https://www.youtube.com/watch?v=MUx9BEu0ww0) [![](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🥺&style=flat&labelColor=ff1493&logoColor=fff&color=rgba(234,74,170,0.5) "uwu papi-san")](https://github.com/sponsors/velijv)
 
@@ -86,6 +90,11 @@ rgb: {{r | int(base=16), g | int(base=16), b | int(base=16)}}
 
 </details>
 
+
+
+<blockquote>
+<details>
+  <summary> <h2> 👉 <b><code>rgb: {{ (r, g, b) | list }}</code> </b> </h2> </summary>
 
 ```jinja
 {%- set h = 360 -%}
@@ -125,10 +134,11 @@ rgb: {{r | int(base=16), g | int(base=16), b | int(base=16)}}
 rgb: {{ (r, g, b) | list }}
 ```
 
-## [HS to HEX](#rgb-to-hex)
+</details>
+</blockquote>
 
+## [HS to HEX](#rgb-to-hex)
 
 ***
 
-
-## Try them out in [![Open your Home Assistant instance and show your template developer tools.](https://img.shields.io/badge/My%20🫵-Template%20Dev%20Tools%20🥷-555?logo=HomeAssistant&logoColor=fff&labelColor=555&style=flat&color=03a9f4)](https://my.home-assistant.io/redirect/developer_template/) [![uwu](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🫠&style=flat-square&labelColor=rgba(0,0,0,0)&color=rgba(234,74,170,0.5) "for jsut 1 doolar you can lead a por man to fish")](https://github.com/sponsors/velijv) 
+### Try them out in [![Open your Home Assistant instance and show your template developer tools.](https://img.shields.io/badge/My%20🫵-Template%20Dev%20Tools%20🥷-555?logo=HomeAssistant&logoColor=fff&labelColor=555&style=flat&color=03a9f4)](https://my.home-assistant.io/redirect/developer_template/) [![uwu](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🫠&style=flat-square&labelColor=rgba(0,0,0,0)&color=rgba(234,74,170,0.5) "for jsut 1 doolar you can lead a por man to fish")](https://github.com/sponsors/velijv) 
