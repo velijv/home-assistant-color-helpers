@@ -131,4 +131,4 @@ rgb: {{ (r, g, b) | list }}
 ***
 
 
-## Try them out in [![Open your Home Assistant instance and show your template developer tools.](https://img.shields.io/badge/My%20🫵-Template%20Dev%20Tools%20🥷-555?logo=HomeAssistant&logoColor=fff&labelColor=555&style=flat&color=03a9f4)](https://github.com/home-assistant) [![uwu](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🫠&style=flat-square&labelColor=rgba(0,0,0,0)&color=rgba(234,74,170,0.5) "for jsut 1 doolar you can lead a por man to fish")](https://github.com/sponsors/velijv) 
+## Try them out in [![Open your Home Assistant instance and show your template developer tools.](https://img.shields.io/badge/My%20🫵-Template%20Dev%20Tools%20🥷-555?logo=HomeAssistant&logoColor=fff&labelColor=555&style=flat&color=03a9f4)](https://my.home-assistant.io/redirect/developer_template/) [![uwu](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🫠&style=flat-square&labelColor=rgba(0,0,0,0)&color=rgba(234,74,170,0.5) "for jsut 1 doolar you can lead a por man to fish")](https://github.com/sponsors/velijv) 
