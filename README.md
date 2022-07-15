@@ -24,6 +24,8 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 ```jinja
 {{ '%02x%02x%02x' | format(r, g, b) }}
+# or
+{{'%02x'%r+'%02x'%g+'%02x'%b}} 
 ```
 
 ## HEX to RGB
