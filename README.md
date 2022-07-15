@@ -42,15 +42,35 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 {{r | int(base=16), g | int(base=16), b | int(base=16)}}
 ```
 
-### Get colors
-```jinja
-{{ states.light.reading.attributes.hs_color }}
-# returns `(28.391, 65.659)`
-```
+## Get colors
+
+### HS
 
 ```jinja
-{{ states.light.reading.attributes.rgb_color }}
-# returns `(255, 166, 87)`
+{{ state_attr('light.desk','hs_color') }}
+# returns (240.0, 100.0)
+
+{% set h = (state_attr('light.desk','hs_color') | list )[0] %}
+# hue: {{ h }}
+
+{% set s = (state_attr('light.desk','hs_color') | list )[1] %}
+# saturation: {{ s }}
+```
+
+### RGB
+
+```jinja
+{{ state_attr('light.desk','rgb_color') }}
+# returns (0, 0, 255)
+
+{% set r = (state_attr('light.desk','rgb_color') | list )[0] %}
+# red: {{ r }}
+
+{% set g = (state_attr('light.desk','rgb_color') | list )[1] %}
+# green: {{ g }}
+
+{% set b = (state_attr('light.desk','rgb_color') | list )[2] %}
+# blue: {{ b }}
 ```
 
 
