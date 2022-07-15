@@ -6,6 +6,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 - [HEX to RGB](#hex-to-rgb)
 - RGB to HS
 - HS to RGB
+- [get colors](#get-colors)
 
 
 ## RGB to HEX
