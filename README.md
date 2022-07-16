@@ -8,7 +8,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 5. convert [HS to HEX](#hs-to-hex)
 4. [~~convert RGB to HS~~](#home-assistant-color-helpers)
 
-## Extract colors
+### Extract colors
 
 <details>
   <summary> 🖖 Hue and Saturation <code>(state_attr('light.x','hs_color')</code> </summary>
@@ -94,7 +94,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 <blockquote>
 <details>
-  <summary> <h2> 👉 <b><code>rgb: {{ (r, g, b) | list }}</code> </b> </h2> </summary>
+  <summary> <h3> 👉 <b>hs_color(h,s) -> rgb: {{ (r, g, b) | list }}</b> 👈 </h3> </summary>
 
 ```jinja
 {%- set h = 360 -%}
