@@ -15,9 +15,9 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 ```jinja
 {%- set h = (state_attr('light.desk','hs_color') | list )[0] -%}
-  # hue: {{ h }}
+  # hue : {{ h }}
 {%- set s = (state_attr('light.desk','hs_color') | list )[1] -%}
-  # saturation: {{ s }}
+  # saturation : {{ s }}
 ```
 
 </details>
@@ -28,11 +28,11 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 ```jinja
 {%- set r = (state_attr('light.desk','rgb_color') | list )[0] -%}
-  # red: {{ r }}
+  # red : {{ r }}
 {%- set g = (state_attr('light.desk','rgb_color') | list )[1] -%}
-  # green: {{ g }}
+  # green : {{ g }}
 {%- set b = (state_attr('light.desk','rgb_color') | list )[2] -%}
-  # blue: {{ b }}
+  # blue : {{ b }}
 ```
 
 </details>
@@ -53,7 +53,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 </details>
 
 > ```jinja
-> hex: {{ '%02x%02x%02x' | format(r, g, b) }} - or - {{'%02x'%r+'%02x'%g+'%02x'%b}} 
+> hex : {{ '%02x%02x%02x' | format(r, g, b) }} - or - {{'%02x'%r+'%02x'%g+'%02x'%b}} 
 > ```
 
 ## HEX to RGB
@@ -70,7 +70,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 </details>
 
 > ```jinja
-> rgb: {{r | int(base=16), g | int(base=16), b | int(base=16)}}
+> rgb : {{r | int(base=16), g | int(base=16), b | int(base=16)}}
 > ```
 
 ## HS to RGB [![](https://img.shields.io/badge/🔥-🔫%20😡-B41717.svg?logo=jinja&logoColor=fff&labelColor=B41717&style=flat&color=rgba(180,23,23,0.3) "das f*kged up")](https://www.youtube.com/watch?v=MUx9BEu0ww0) [![](https://img.shields.io/github/sponsors/velijv?logo=githubsponsors&label=🥺&style=flat&labelColor=ff1493&logoColor=fff&color=rgba(234,74,170,0.5) "uwu papi-san")](https://github.com/sponsors/velijv)
@@ -94,7 +94,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 <blockquote>
 <details>
-  <summary> <h3> 👉 <b>hs_color(h,s) -> rgb: {{ (r, g, b) | list }}</b> 👈 </h3> </summary>
+  <summary> <h3> 👉 <b>hs_color(h,s) -> rgb : {{ (r, g, b) | list }}</b> 👈 </h3> </summary>
 
 ```jinja
 {%- set h = 360 -%}
@@ -131,7 +131,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
   {%- set b = q | int -%}
 {%- endif -%}
 
-rgb: {{ (r, g, b) | list }}
+rgb : {{ (r, g, b) | list }}
 ```
 
 </details>
