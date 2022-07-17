@@ -4,7 +4,7 @@ Common **jinja** template **color helper** functions for [![Home Assistant](http
 
 2. convert [RGB to HEX](#rgb-to-hex)
 3. convert [HEX to RGB](#hex-to-rgb)
-5. convert [HS to RGB](#hs-to-rgb)
+5. convert [HS to RGB](#hs-to-rgb--)
 5. convert [HS to HEX](#hs-to-hex)
 4. [~~convert RGB to HS~~](#home-assistant-color-helpers)
 
